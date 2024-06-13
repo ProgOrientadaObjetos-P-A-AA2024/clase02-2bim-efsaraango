@@ -7,6 +7,8 @@ public class EstudiantePresencial extends Estudiante{
     double costoCredito;
     double matriculaPresencial;
     
+    // recibe parametros para la clase EstudiantePresencial y no se tiene q
+    // llamar a los establcer de esta clase 
     public EstudiantePresencial(String n, String ap, String iden, int ed, 
             int creditos, double costo){
         super(n, ap, iden, ed);

@@ -5,6 +5,7 @@
  */
 package paquete6;
 
+import java.util.Locale;
 import java.util.Scanner;
 
 /**
@@ -19,15 +20,32 @@ public class Ejecutor2 {
         // Debe existir 1 sola impresión de todos los estudiantes presenciales
         // No usar arreglos
         
-        // Trabajo clases 16 junio 2022
+        // Trabajo clases 13 junio 2024
         Scanner entrada = new Scanner(System.in);
         boolean bandera = true;
         String cadena = "";
         
+                
         while(bandera){
-            System.out.println("ingresa un saludo");
-            String saludo = entrada.nextLine();
-            cadena = String.format("%s%s\n", cadena, saludo);
+            entrada.useLocale(Locale.US);
+            System.out.println("Ingrese nombre");
+            String n = entrada.nextLine();
+            System.out.println("Ingrese apellido");
+            String ap = entrada.nextLine();
+            System.out.println("Ingrese identificación");
+            String ced = entrada.nextLine();
+            System.out.println("Ingrese edad");
+            int edad = entrada.nextInt();
+            System.out.println("Ingrese el numero de Creditos");
+            int numeroCreditos = entrada.nextInt();
+            System.out.println("Ingrese el costo del credito");
+            double costoCredito = entrada.nextDouble();
+             entrada.nextLine();
+            EstudiantePresencial presencial = new EstudiantePresencial(n, ap, ced, 
+                edad, costoCredito, numeroCreditos);
+             presencial.calcularMatriculaPresencial();
+             
+             cadena = String.format("%s%s\n", cadena, presencial);
             System.out.println("Desea salir, pulse S");
             String opcion = entrada.nextLine();
             if(opcion.equals("S")){
