@@ -1,11 +1,19 @@
 package paquete2;
 
+// el error esta por q necesitamos unos de los constructores q se encuentre en 
+// la superclase "Estudiante" y tiene q hacer uso obligatorio del constructor
+
 public class EstudianteDistancia extends Estudiante{
     
     private int numeroAsignaturas;
     private double costoAsignatura;
     private double matriculaDistancia;
     
+    public EstudianteDistancia(String n, String a, String iden, int ed){
+        super(n, a, iden, ed);
+        
+        
+    }
     
     // 2.  Método establecerNumeroAsginaturas(numero: Real)
     public void establecerNumeroAsginaturas(int numero){

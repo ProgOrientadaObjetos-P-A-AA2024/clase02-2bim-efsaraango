@@ -19,9 +19,17 @@ public class Ejecutor {
         String identificacion = "110011";
         int edad = 36;
         
+        
         EstudianteDistancia estDistancia = new EstudianteDistancia(nombre, 
                 apellido, identificacion, edad);
         
+        estDistancia.establecerNumeroAsginaturas(5);
+        estDistancia.establecerCostoAsignatura(100);
+        
+        estDistancia.calcularMatriculaDistancia();
+        
+        
+        // impre el objeto estudiante Distancia
         System.out.println(estDistancia);
                 
         

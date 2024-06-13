@@ -1,6 +1,10 @@
 
 package paquete2;
 
+
+// el error esta por q necesitamos unos de los constructores q se encuentre en 
+// la superclase "Estudiante"
+
 public class EstudiantePresencial extends Estudiante{
     
     /*1.  Declarar
